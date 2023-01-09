@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: yes
+
+  vars_files:
+    - vars/smartfox.yml
+  tasks:
+    - import_tasks: tasks/prepare-environment.yml
+    - import_tasks: tasks/download-smartfox.yml
+    - import_tasks: tasks/configure.yml
+    - import_tasks: tasks/create-service.yml
