@@ -1,0 +1,19 @@
+---
+- name: Download SmartFox 2X
+  get_url:
+    url: "https://smartfoxserver.com/downloads/sfs2x/SFS2X_unix_{{ smartfox_version | replace('.', '_') }}.tar.gz"
+    dest: "/tmp"
+    mode: 0644
+    owner: "smartfox"
+    group: "smartfox"
+  register: smartfox_archive_tmp
+
+- name: Extract SmartFox
+  unarchive:
+    src: "{{ smartfox_archive_tmp.dest }}"
+    dest: "/opt/smartfox"
+    remote_src: yes
+    owner: "smartfox"
+    group: "smartfox"
+    mode: 0755
+    creates: "/opt/smartfox/SmartFoxServer_2X/SFS2X/lib/sfs2x-core.jar"
