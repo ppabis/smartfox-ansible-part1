@@ -1,2 +1,6 @@
 ---
 smartfox_version: "2.18.0"
+smartfox_ssl_keystore_file: mykeystore.jks
+smartfox_ssl_keystore_password: VeRySeCrEtPa5s
+smartfox_admin_user: Gamemaster
+smartfox_admin_password: G4M3mast3r
