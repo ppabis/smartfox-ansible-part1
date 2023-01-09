@@ -1,0 +1,15 @@
+---
+- name: Install unzip and acl (Debian/Ubuntu)
+  apt:
+    name:
+      - unzip
+      - acl
+    state: present
+
+- name: Ensure user smartfox exists
+  user:
+    name: "smartfox"
+    shell: /bin/false
+    home: "/opt/smartfox"
+    state: present
+    system: yes
