@@ -4,8 +4,13 @@
 
   vars_files:
     - vars/smartfox.yml
+
+  handlers:
+    - import_tasks: handlers/smartfox.yml
+
   tasks:
     - import_tasks: tasks/prepare-environment.yml
     - import_tasks: tasks/download-smartfox.yml
-    - import_tasks: tasks/configure.yml
-    - import_tasks: tasks/create-service.yml
+    - import_tasks: tasks/configure-smartfox.yml
+    - import_tasks: tasks/install-smartfox.yml
+    - import_tasks: tasks/zones-and-extensions.yml

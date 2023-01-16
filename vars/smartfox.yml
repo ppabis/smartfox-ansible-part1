@@ -11,3 +11,4 @@ smartfox_admin_allowed_ips:
 smartfox_target_directory: "/opt/smartfox"
 sfs2x_directory: "{{ smartfox_target_directory }}/SmartFoxServer_2X/SFS2X"
 smartfox_user: smartfox
+smartfox_lock_uploads: false
