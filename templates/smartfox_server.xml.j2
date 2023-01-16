@@ -30,6 +30,9 @@
       </adminUser>
     </administrators>
     <allowedRemoteAddresses>
+    {%- for ip in smartfox_admin_allowed_ips %}
+      <string>{{ ip }}</string>
+    {% endfor %}
     </allowedRemoteAddresses>
     <adminTcpPort>-1</adminTcpPort>
     <useEncryption>true</useEncryption>
