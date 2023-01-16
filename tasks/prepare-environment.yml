@@ -8,7 +8,7 @@
 
 - name: Ensure user smartfox exists
   user:
-    name: "smartfox"
+    name: "{{ smartfox_user }}"
     shell: /bin/false
     home: "{{ smartfox_target_directory }}"
     state: present
