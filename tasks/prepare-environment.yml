@@ -10,6 +10,6 @@
   user:
     name: "smartfox"
     shell: /bin/false
-    home: "/opt/smartfox"
+    home: "{{ smartfox_target_directory }}"
     state: present
     system: yes

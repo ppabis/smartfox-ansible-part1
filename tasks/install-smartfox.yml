@@ -1,7 +1,7 @@
 ---
 - name: Copy SmartFox systemd service file
-  copy:
-    src: files/smartfox.service
+  template:
+    src: files/smartfox.service.j2
     dest: /etc/systemd/system/smartfox.service
     owner: root
     group: root

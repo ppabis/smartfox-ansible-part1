@@ -11,9 +11,9 @@
 - name: Extract SmartFox
   unarchive:
     src: "{{ smartfox_archive_tmp.dest }}"
-    dest: "/opt/smartfox"
+    dest: "{{ smartfox_target_directory }}"
     remote_src: yes
     owner: "smartfox"
     group: "smartfox"
     mode: 0755
-    creates: "/opt/smartfox/SmartFoxServer_2X/SFS2X/lib/sfs2x-core.jar"
+    creates: "{{ sfs2x_directory }}/lib/sfs2x-core.jar"
