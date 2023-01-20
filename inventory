@@ -1,0 +1,7 @@
+[smartfox]
+smartfox.loc
+
+[smartfox:vars]
+# disable host key checking
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+ansible_ssh_user=ubuntu
