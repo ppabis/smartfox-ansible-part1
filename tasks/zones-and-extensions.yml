@@ -1,22 +1,11 @@
 ---
 - name: Copy all *.jar extensions
   copy:
-    src: "{{ item }}"
+    src: "files/extensions/"
     dest: "{{ sfs2x_directory }}/extensions/"
     owner: "{{ smartfox_user }}"
     group: "{{ smartfox_user }}"
     mode: 0644
-  with_fileglob: "files/extensions/*.jar"
-  notify: restart smartfox
-
-- name: Copy all *.jar dependencies for extensions
-  copy:
-    src: "{{ item }}"
-    dest: "{{ sfs2x_directory }}/extensions/__lib__"
-    owner: "{{ smartfox_user }}"
-    group: "{{ smartfox_user }}"
-    mode: 0644
-  with_fileglob: "files/extensions/lib/*.jar"
   notify: restart smartfox
 
 - name: Remove default zone
