@@ -6,6 +6,7 @@
     owner: "{{ smartfox_user }}"
     group: "{{ smartfox_user }}"
     mode: 0660
+  notify: restart smartfox
 
 - name: Copy tomcat.xml configuration
   template:
@@ -14,6 +15,7 @@
     owner: "{{ smartfox_user }}"
     group: "{{ smartfox_user }}"
     mode: 0660
+  notify: restart smartfox
 
 - name: Copy keystore to tomcat directory
   copy:
@@ -22,4 +24,5 @@
     owner: "{{ smartfox_user }}"
     group: "{{ smartfox_user }}"
     mode: 0400
+  notify: restart smartfox
   when: smartfox_ssl_keystore_file != ""
