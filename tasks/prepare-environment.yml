@@ -4,6 +4,12 @@
     name:
       - unzip
       - acl
+      - python3-pip
+    state: present
+
+- name: Install lxml
+  pip:
+    name: lxml
     state: present
 
 - name: Ensure user smartfox exists
