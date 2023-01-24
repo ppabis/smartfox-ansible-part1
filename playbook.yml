@@ -10,6 +10,7 @@
 
   tasks:
     - import_tasks: tasks/prepare-environment.yml
+    - import_tasks: tasks/version-detect.yml
     - import_tasks: tasks/download-smartfox.yml
     - import_tasks: tasks/configure-smartfox.yml
     - import_tasks: tasks/install-smartfox.yml
