@@ -17,4 +17,4 @@
     owner: "{{ smartfox_user }}"
     group: "{{ smartfox_user }}"
     mode: 0755
-    creates: "{{ sfs2x_directory }}/lib/sfs2x-core.jar"
+  when: current_version is not defined or current_version != smartfox_version

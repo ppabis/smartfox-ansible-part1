@@ -15,6 +15,5 @@
 
 - name: Extract value from install4j
   set_fact:
-    name: current_version
-    value: "{{ (i4j_conf.matches | first).applicationVersion }}"
-  when: i4j_conf is defined and i4j_conf.count > 0
+    current_version: "{{ (i4j_conf.matches | first).general.applicationVersion }}"
+  when: i4j_conf is defined and "count" in i4j_conf and i4j_conf.count > 0
