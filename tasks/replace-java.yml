@@ -8,6 +8,7 @@
   shell:
     cmd: file -L {{ smartfox_target_directory }}/SmartFoxServer_2X/jre/bin/java
   register: java_arch
+  changed_when: false
 
 - name: Remove Java for x86_64
   file:
