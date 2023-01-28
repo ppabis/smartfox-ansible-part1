@@ -5,6 +5,8 @@
   vars_files:
     - vars/smartfox.yml
     - "vars/java-{{ ansible_os_family }}.yml"
+    - "vars/packages-{{ ansible_os_family }}.yml"
+    - "vars/packages-common.yml"
 
   handlers:
     - import_tasks: handlers/smartfox.yml
